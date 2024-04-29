@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+
+        .info-produk {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 20px;
+            position: relative;
+        }
+
+        .gambar-produk {
+            width: 100%;
+            height: auto;
+            border-radius: 2rem;
+        }
+
+        .detail-produk {
+            padding: 20px;
+        }
+
+        .profil-penjual {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gambar-profil-penjual {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        .penjual-info {
+            margin-bottom: 10px;
+        }
+
+        .pesanan {
+    background-color: white;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 5px; /* Tambahkan margin-top 5px */
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-pesan {
+    padding: 8px 16px;
+    background-color: #292929;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-pesan:hover {
+    background-color: #0056b3;
+}
+
+
+        .close-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #000000;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 999;
+            background-color: rgba(255, 255, 255, 0.486);
+            padding: 1rem;
+            border-radius: 100rem;
+        }
+
+        .close-icon:hover {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tombol Close -->
+    <a href="./TakumiMart.html"><i class="bi bi-x close-icon"></i></a>
+    <div class="info-produk">
+        <!-- Gambar Produk -->
+        <img src="https://img.freepik.com/free-photo/deep-fried-fish-ball-dark-surface_1150-43600.jpg?t=st=1714310738~exp=1714314338~hmac=5ee23bfd21aa50c2938f4d81966ba084686db5051e04a7bc729e3ce133b68bcb&w=740" alt="Gambar Produk" class="gambar-produk">
+      
+        <!-- Informasi Produk -->
+        <div class="detail-produk">
+          <!-- Nama Produk -->
+          <h3>Nama Produk</h3>
+          <!-- Harga -->
+          <p>Harga: Rp. 50.000</p>
+          <!-- Keterangan -->
+          <p>Keterangan: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      
+        <!-- Profil Penjual -->
+        <div class="profil-penjual">
+          <!-- Gambar Profil -->
+          <img src="https://img.freepik.com/free-photo/portrait-young-beautiful-woman-gesticulating_273609-40467.jpg?t=st=1714311952~exp=1714315552~hmac=410d5c79df1fb01aa3d1e8db4328ae1bbc2c9cf22abab3c2349e8ac3291c3ce7&w=740" alt="Profil Penjual" class="gambar-profil-penjual">
+          <!-- Nama dan Status Penjual -->
+          <div class="penjual-info">
+              <b>Ibrahim</b>
+              <p>Admin</p>
+          </div>
+        </div>
+      
+        <!-- Kotak Pesanan -->
+        <div class="pesanan">
+          <!-- Label Kuantitas -->
+          <label for="quantity">Jumlah:</label>
+          <!-- Kotak Input Kuantitas -->
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
+          <!-- Tombol Pesan -->
+          <button type="button" class="btn-pesan ">Pesan</button>
+        </div>
+    </div>
+    <!-- Bootstrap JS (optional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange children vertically */
+    min-height: 100vh; /* Set minimum height to 100% of viewport height */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1572ff; /* Warna latar belakang navbar */
+    padding: 10px 20px; /* Padding di dalam navbar */
+    display: flex; /* Menggunakan flexbox */
+    justify-content: right; /* Memposisikan semua item ke tengah */
+}
+
+/* List dalam navbar */
+.navbar ul {
+    list-style-type: none; /* Menghilangkan bullet point */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Setiap item dalam list */
+.navbar li {
+    margin-right: 30px; /* Jarak antara setiap item */
+}
+
+/* Input pencarian */
+/* Input pencarian */
+.navbar input[type="search"] {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* Ikon pada tombol pencarian */
+.navbar .bi-search {
+    font-size: 2rem; /* Ukuran ikon */
+    color: #fdfeff; /* Warna ikon */
+}
+
+/* Ikon pada tombol keranjang belanja dan tombol obrolan */
+.navbar a {
+    color: #ffffff; /* Warna ikon */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+}
+i{
+    font-size: 2rem;
+    color: white;
+}
+
+.prm,.prdk {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-weight: 3px;
+}
+/* Style untuk promo */
+.promo,
+.produk {
+    margin-left: 20px;
+    display: flex; /* Menampilkan card secara berdampingan */
+    flex-wrap: nowrap; /* Menghentikan pembungkus card ke baris baru */
+    overflow-x: auto; /* Membuat scroller horizontal jika card melebihi lebar layar */
+    margin-bottom: 20px; /* Jarak bawah dari promo */
+    padding-bottom: 10px; /* Padding bawah dari promo */
+    border-bottom: px solid #ccc; /* Garis bawah dari promo */
+}
+
+/* Style untuk card */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transition: 0.3s; /* Transisi ketika dihover */
+    width: 10rem; /* Lebar card */
+    margin-right: 20px; /* Jarak antara card */
+    flex: 1; /* Mengatur ukuran fleksibel, tetapi tidak dapat diperbesar atau diperkecil */
+    background-color: #1572ff;
+    color: white;
+}
+
+b {
+    margin-top: 20px;
+}
+
+.container h4 {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.container p {
+    font-size: 0.8rem;
+}
+
+/* Gambar dalam card */
+.card img {
+    width: 100%; /* Lebar gambar */
+    height:150px; /* Tinggi gambar akan disesuaikan secara otomatis */
+}
+
+
+/* Efek bayangan saat dihover */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* Style untuk promo */
+.promo ul{
+    list-style-type: none; /* Menghilangkan bullet point pada list */
+    padding: 0; /* Menghapus padding default */
+    margin: 0; /* Menghapus margin default */
+    display: flex; /* Menampilkan elemen dalam satu baris */
+}
+
+/* Style untuk setiap card */
+.promo ul li {
+    margin-right: 20px; /* Jarak antara setiap card */
+}
+
+.card-p {
+    display: flex;
+    padding: 0; /* Menghapus padding default */
+    margin: 0; /* Menghapus margin default */
+}
+
+/* Style untuk footer */
+footer {
+    background-color: #f0f0f0; /* Warna latar belakang footer */
+    padding: 20px; /* Padding pada footer */
+    text-align: center; /* Teks berada di tengah */
+}
+
+/* Style untuk ul dalam footer */
+footer ul {
+    list-style-type: none; /* Menghilangkan bullet point pada list */
+    padding: 0; /* Menghapus padding default */
+    margin: 0; /* Menghapus margin default */
+    display: flex; /* Menampilkan elemen dalam satu baris */
+    justify-content: center; /* Tengahkan elemen dalam baris */
+}
+
+/* Style untuk setiap li dalam footer */
+footer ul li {
+    margin-right: 10vh; /* Jarak antara setiap link */
+    text-align: center; /* Teks berada di tengah */
+}
+
+/* Style untuk setiap link dalam footer */
+footer ul li a {
+    text-decoration: none; /* Menghilangkan dekorasi link */
+    color: #333; /* Warna teks link */
+    display: flex; /* Menampilkan elemen dalam satu baris */
+    flex-direction: column; /* Menyusun elemen secara vertikal (ikon di atas teks) */
+    align-items: center; /* Tengahkan elemen vertikal (ikon di atas teks) */
+}
+
+/* Style untuk ikon dalam link */
+footer ul li a  {
+    margin-bottom: 5px; /* Jarak antara ikon dan teks */
+}
+
+footer i{
+    color: #333;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+* Footer */
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+    width: 100vh; /* Set width to 100% */
+}
+
+/* Media query untuk membuat navbar responsive */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Tumpukan item navbar pada perangkat kecil */
+    }
+
+    .navbar li {
+        margin-bottom: 10px; /* Jarak antara item navbar pada perangkat kecil */
+    }
+}
+

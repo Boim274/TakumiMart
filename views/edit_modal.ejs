@@ -1,0 +1,52 @@
+<!-- Modal -->
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Produk</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="/produk?_method=PUT" method="POST">
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="nama">Nama Produk</label>
+              <input type="text" class="form-control nama_produk" id="nama_produk" name="nama_produk" placeholder="Masukkan Nama Produk" required>
+            </div>
+            <div class="form-group">
+              <label for="harga">Harga</label>
+              <input type="number" class="form-control harga" id="harga" name="harga" placeholder="Masukkan Harga" required>
+            </div>
+            <div class="form-group">
+              <label for="deskripsi">Deskripsi</label>
+              <input type="text" class="form-control deskripsi" id="deskripsi" name="deskripsi" placeholder="Masukkan Deskripsi" required>
+            </div>
+            <div class="form-group">
+              <label for="kategori">Kategori</label>
+              <select class="form-control kategori" id="kategori" name="kategori" required>
+                <option value="">Pilih Kategori</option>
+                <option value="makanan">Makanan</option>
+                <option value="alat tulis">Alat Tulis</option>
+                <option value="jajanan">Jajanan</option>
+                <option value="minuman">Minuman</option>
+                <option value="souvenir">Souvenir</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="gambar_produk">Gambar Produk</label>
+                <input type="text" class="form-control gambar_produk" id="gambar_produk" name="gambar_produk" placeholder="Masukkan gambar produk" required>
+                <small class="form-text text-muted">Pilih file gambar untuk produk (format: JPG, PNG, GIF, dll.).</small>
+              </div>            
+          </div>
+          <div class="modal-footer">
+            <!-- Hidden field for product ID -->
+            <input type="hidden" class="id" name="id">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

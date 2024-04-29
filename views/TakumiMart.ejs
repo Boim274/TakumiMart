@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= Takumi Mart %></title>
+  <!-- Google Fonts: Poppins -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Bootstrap Icons CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./mart.css">
+  <!-- CSS -->
+  <style>
+    body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+  }
+  
+  i {
+    font-size: 2em; /* Ukuran ikon 2x lebih besar dari ukuran default */
+    color: rgb(0, 0, 0); /* Warna ikon biru */
+    opacity: 0.8; /* Mengatur opasitas ikon */
+    transform: rotate(45deg); /* Memutar ikon sebesar 45 derajat */
+  }
+  
+  .takumi h2{
+    margin-right: 10rem;
+    padding: 20px;
+  }
+  
+  .filter ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .filter ul li {
+    text-align: center;
+    margin-right: 30px; /* Spasi antar item */
+  }
+  
+  .icon-container {
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .icon-container:hover {
+    background-color: #222222;
+    color: white;
+  }
+  
+  .icon-container i {
+    transform: none;
+    font-size: 32px;
+    color: #000;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+}
+  
+  .icon-container i:hover {
+    color: white;
+  }
+  
+  .filter ul li span {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .card {
+    width: 18rem;
+    border-radius: 0.25rem;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .card-img-top {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .pr-user {
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-text {
+    margin-bottom: 0;
+  }
+  
+  .harga {
+    display: flex;
+    align-items: center;
+  }
+  
+  .harga p {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+  
+  .bi-plus {
+    transform: none;
+    font-size: 2rem;
+    /*Ukuranikonplus*/margin-left: auto;
+    /*Meletakkanikondisisikanan*/cursor: pointer;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+}
+  
+  .container-2 {
+    display: flex;
+    flex-wrap: nowrap; /* agar tidak wrap ke baris baru */
+    overflow-x: auto; /* agar bisa di-scroll jika konten melebihi lebar */
+    margin-bottom: 20px; /* tambahkan margin jika perlu */
+  }
+  
+  .cards-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card {
+    flex: 0 0 auto; /* agar kartu tidak fleksibel dan tetap ukurannya */
+    width: 18rem; /* sesuaikan lebar kartu */
+    margin-right: 10px; /* tambahkan jarak antar kartu */
+  }
+  
+  .card:last-child {
+    margin-right: 0; /* menghapus margin kanan pada kartu terakhir */
+  }
+  
+  .card-link {
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    color: inherit; /* Menggunakan warna teks default */
+  }
+  .card-link:hover {
+    text-decoration: none; /* Menghilangkan garis bawah saat dihover */
+    color: inherit; /* Tetap menggunakan warna teks default saat dihover */
+  }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg  ">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+      <!-- Form pencarian -->
+      <a href="./search.html" class=" my-2 my-sm-0 mr-5 text-dark">
+        <i class="bi bi-search -4"></i>
+      </a>
+      <!-- Tombol keranjang -->
+      <a href="#" class="keranjang my-2 my-sm-0 mr-5 text-dark">
+        <i class="bi bi-cart3 "></i>
+      </a>
+      <!-- Tombol profil -->
+      <a href="#" class="profile my-2 my-sm-0 text-dark">
+        <i class="bi bi-person-circle "></i>
+      </a>
+    </div>
+  </nav>
+
+  <div class="takumi">
+    <h2>Takumi Mart</h2>
+  </div>
+
+  <div class="container">
+    <div class="filter">
+        <ul>
+          <li>
+            <a href="#">
+            <div class="icon-container">
+              <i class="bi bi-funnel"></i>
+            </div>
+          </a>
+            <span>Filter</span>
+        </li>
+            <li>
+              <a href="#">
+                <div class="icon-container">
+                    <i class="bi bi-cup"></i>
+                </div>
+              </a>
+                <span>Makanan</span>
+            </li>
+            <li>
+              <a href="">
+                <div class="icon-container">
+                    <i class="bi bi-pencil"></i>
+                </div>
+              </a>
+                <span>Alat Tulis</span>
+            </li>
+            <li>
+              <a href="">
+                <div class="icon-container">
+                  <i class="bi bi-egg-fried"></i>
+                </div>
+              </a>
+                <span>Jajanan</span>
+            </li>
+            <li>
+              <a href="">
+                <div class="icon-container">
+                  <i class="bi bi-cup-hot"></i>
+                </div>
+              </a>
+                <span>Minuman</span>
+            </li>
+            <li>
+              <a href="">
+                <div class="icon-container">
+                    <i class="bi bi-gift"></i>
+                </div>
+              </a>
+                <span>Souvenir</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="container-2">
+  <ul class="cards-list">
+    <% for(let i = 0; i < produk.length; i++) { %>
+      <li class="card">
+        <a href="/info-produk" class="card-link">
+          <img src="<%= produk[i].gambar_produk %>" class="card-img-top" alt="Gambar Makanan">
+          <img src="https://img.freepik.com/free-photo/portrait-young-beautiful-woman-gesticulating_273609-40467.jpg?t=st=1714311952~exp=1714315552~hmac=410d5c79df1fb01aa3d1e8db4328ae1bbc2c9cf22abab3c2349e8ac3291c3ce7&w=740" class="pr-user" alt="Gambar profile">
+          <div class="card-body">
+            <h5 class="card-title"><%= produk[i].nama_produk %></h5>
+            <div class="harga">
+              <p class="card-text"><b>Rp.<%= produk[i].harga %></b></p>
+              <i class="bi bi-plus"></i>
+            </div>
+          </div>
+        </a>
+      </li>
+    <% } %>
+  </ul>
+</div>
+
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
